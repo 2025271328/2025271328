@@ -5,7 +5,7 @@ int strlen(char buff[]) {
 	int size = 0;
 	for (int i = 0; i < SIZE; i++) {
 		if (buff[i] == '\0') break;
-		else size++;
+		size++; // else 없는게 의미전달에 유리 
 	}
 	return size;
 }
@@ -21,3 +21,4 @@ int main(void) {
 
 	return 0;
 }
+
