@@ -16,9 +16,9 @@
 //
 //
 //int Rock_Paper_Scissors(const char* who, int what) {
-//	if (what == SCISSORS) printf("%s : °¡À§\n", who);
-//	else if (what == ROCK) printf("%s : ¹ÙÀ§\n", who);
-//	else if (what == PAPER) printf("%s : º¸\n", who);
+//	if (what == SCISSORS) printf("%s : ê°€ìœ„\n", who);
+//	else if (what == ROCK) printf("%s : ë°”ìœ„\n", who);
+//	else if (what == PAPER) printf("%s : ë³´\n", who);
 //	else return ERROR;
 //
 //	return NO_ERROR;
@@ -26,7 +26,7 @@
 //
 //int compare_victory(int com, int me) {
 //
-//	Rock_Paper_Scissors("ÄÄÇ»ÅÍ", com);
+//	Rock_Paper_Scissors("ì»´í“¨í„°", com);
 //
 //	if (com == me) return DRAW;
 //	else if (com - me == 1 || com - me == -2) return COMPUTER_WIN;
@@ -48,15 +48,15 @@
 //	
 //	if (test != NULL) {
 //		char load_ok = 0;
-//		printf("¼¼ÀÌºêÇÑ ÆÄÀÏÀ» ·ÎµåÇÏ½Ã°Ú½À´Ï±î? (y/n) : ");
+//		printf("ì„¸ì´ë¸Œí•œ íŒŒì¼ì„ ë¡œë“œí•˜ì‹œê² ìŠµë‹ˆê¹Œ? (y/n) : ");
 //		load_ok = getchar();
 //
 //		if (load_ok == 'y') {
 //			fscanf(save_load_R, "%d", &computer);
 //			fscanf(save_load_R, "%d", &human);
 //			fscanf(save_load_R, "%d", &draw);
-//			printf("\n»ç¸²ÀÌ ÀÌ±ä È½¼ö = %d, ", human);
-//			printf("ÄÄÇ»ÅÍ°¡ ÀÌ±ä È½¼ö = %d, µ¿Á¡ = %d\n\n", computer, draw);
+//			printf("\nì‚¬ë¦¼ì´ ì´ê¸´ íšŸìˆ˜ = %d, ", human);
+//			printf("ì»´í“¨í„°ê°€ ì´ê¸´ íšŸìˆ˜ = %d, ë™ì  = %d\n\n", computer, draw);
 //		}
 //		fclose(save_load_R);
 //	}
@@ -64,29 +64,29 @@
 //
 //	while (true) {
 //		com = rand() % 3;
-//		printf("0: °¡À§, 1: ¹ÙÀ§, 2: º¸\n´ç½ÅÀÌ ³¾ °ÍÀº?: ");
+//		printf("0: ê°€ìœ„, 1: ë°”ìœ„, 2: ë³´\në‹¹ì‹ ì´ ë‚¼ ê²ƒì€?: ");
 //		scanf("%d", &me);
-//		if (Rock_Paper_Scissors("´ç½Å", me) == ERROR) {
-//			printf("\n¹İÄ¢! ´Ù½Ã ³» ÁÖ¼¼¿ä.\n");
+//		if (Rock_Paper_Scissors("ë‹¹ì‹ ", me) == ERROR) {
+//			printf("\në°˜ì¹™! ë‹¤ì‹œ ë‚´ ì£¼ì„¸ìš”.\n");
 //			continue;
 //		}
 //
 //		tmp = compare_victory(com, me);
 //		if (tmp == COMPUTER_WIN) {
-//			printf("ÄÄÇ»ÅÍ°¡ ÀÌ°å½À´Ï´Ù.\n");
+//			printf("ì»´í“¨í„°ê°€ ì´ê²¼ìŠµë‹ˆë‹¤.\n");
 //			computer++;
 //		}
 //		else if (tmp == HUMAN_WIN) {
-//			printf("»ç¶÷ÀÌ ÀÌ°å½À´Ï´Ù.\n");
+//			printf("ì‚¬ëŒì´ ì´ê²¼ìŠµë‹ˆë‹¤.\n");
 //			human++;
 //		}
 //		else if (tmp == DRAW) {
-//			printf("ºñ°å½À´Ï´Ù.\n");
+//			printf("ë¹„ê²¼ìŠµë‹ˆë‹¤.\n");
 //			draw++;
 //		}
-//		printf("\n»ç¶÷ÀÌ ÀÌ±ä È½¼ö = %d, ", human);
-//		printf("ÄÄÇ»ÅÍ°¡ ÀÌ±ä È½¼ö = %d, µ¿Á¡ = %d\n\n", computer, draw);
-//		printf("´Ù½Ã °ÔÀÓÀ» ÇÏ½Ã°Ú½À´Ï±î?(y/n) : ");
+//		printf("\nì‚¬ëŒì´ ì´ê¸´ íšŸìˆ˜ = %d, ", human);
+//		printf("ì»´í“¨í„°ê°€ ì´ê¸´ íšŸìˆ˜ = %d, ë™ì  = %d\n\n", computer, draw);
+//		printf("ë‹¤ì‹œ ê²Œì„ì„ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n) : ");
 //		do {
 //			ask_finish = (char)getchar();
 //		} while (ask_finish == '\n');
@@ -94,7 +94,7 @@
 //		printf("\n");
 //	}
 //	char save_ok = 0;
-//	printf("ÁøÇà »óÈ²À» ¼¼ÀÌºêÇÏ½Ã°Ú½À´Ï±î?(y/n) : ");
+//	printf("ì§„í–‰ ìƒí™©ì„ ì„¸ì´ë¸Œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?(y/n) : ");
 //	do {
 //		save_ok = getchar();
 //	} while (save_ok == '\n');
@@ -111,31 +111,37 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-void push(int* top, int* stack_buff) { 
-	int value;
-	printf("stack¿¡ ³ÖÀ» °ªÀ» ÀÔ·ÂÇØÁÖ¼¼¿ä: ");
-	scanf("%d", &value);
-	stack_buff[(*top)++] = value;
-}
+class CStack {
+public://ì „ì²´ê³µê°œ
+	int stack_buff[256];//ë©¤ë²„ë³€ìˆ˜
+	int top;
+	void push() {//ë©¤ë²„í•¨ìˆ˜=ë©”ì„œë“œ
+		int value;
+		printf("stackì— ë„£ì„ ê°’ì„ ì…ë ¥í•´ì£¼ì„¸ìš”: ");
+		scanf("%d", &value);
+		stack_buff[top++] = value;
+	}
+};
+
 
 void pop(int* top, int* stack_buff) {
 	if (*top > 0)
-		printf("ºüÁ®³ª¿Â°ª: %d\n", stack_buff[--(*top)]);
+		printf("ë¹ ì ¸ë‚˜ì˜¨ê°’: %d\n", stack_buff[--(*top)]);
 	else
-		printf("stack ÀÌ ºñ¾îÀÖ½À´Ï´Ù");
+		printf("stack ì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤");
 }
 
-void print(int* top, int* stack_buff) {
-	printf("\nstack ³»ºÎ>\n"); 
-	for (int i = 0; i < *top; i++) {
+void print(int top, int* stack_buff) {
+	printf("\nstack ë‚´ë¶€>\n"); 
+	for (int i = 0; i < top; i++) {
 		printf(" | %d ", stack_buff[i]);
 	}
 	printf("\n\n");
 }
 
 int main() {
-	int stack_buff[256];
-	int top = 0, value, choice;
+	CStack st;
+	int value, choice;
 	bool while_flag = true;
 
 	while (while_flag) {
@@ -143,16 +149,56 @@ int main() {
 		scanf("%d", &choice);
 
 		switch (choice) {
-		case 1: // push ±â´É ÇÔ¼ö
-			push(&top, stack_buff);
+		case 1: // push ê¸°ëŠ¥ í•¨ìˆ˜
+			st.push();
 			break;
-		case 2: // pop ±â´É ÇÔ¼ö
+		case 2: // pop ê¸°ëŠ¥ í•¨ìˆ˜
 			pop(&top, stack_buff);
 		default:
 			while_flag = false;
 			break;
 		}
-		// print ±â´É ÇÔ¼ö
-		print(&top, stack_buff);
+		// print ê¸°ëŠ¥ í•¨ìˆ˜
+		print(top, stack_buff);
 	}
 }
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//#define MAXSIZE 10
+//
+//int queue[MAXSIZE];
+//int front, rear;
+//
+//void init_queue(void) {
+//	front = rear = 0;
+//	printf("QUEUE SIZE is %d\n\n", MAXSIZE);
+//}
+//
+//void clear_queue(void) {
+//	front = rear;
+//}
+//
+//int enqueue(int val) {
+//	if ((rear + 1) % MAXSIZE == front) {
+//		printf("Queue Overflow, \n");
+//		return -1;
+//	}
+//	queue[rear] = val;
+//
+//	rear = ++rear % MAXSIZE;
+//
+//	return val;
+//}
+//
+//int dequeue(void) {
+//	int i;
+//	if (front == rear) {
+//		printf("Queue Overflow \n");
+//		return -1;
+//	} 
+//	i = queue[front];
+//	front = ++front % MAXSIZE;
+//	return i;
+//}
